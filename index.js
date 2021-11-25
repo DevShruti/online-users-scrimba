@@ -10,3 +10,17 @@
         -The component should only be wide enough to Fit its Content (and some padding)
 */
 
+async function getUsers() {
+    let response = await fetch("users.json")
+    let users = await response.json()
+    return users
+}
+
+getUsers().then(users => {
+    let sampleUser = users[0]
+    let userDiv = `
+        <div class="my-online-user">${sampleUser.username}</div>
+    `
+    
+    document.body.innerHTML = userDiv
+})
