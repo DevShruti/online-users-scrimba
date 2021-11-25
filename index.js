@@ -19,8 +19,12 @@ async function getUsers() {
 getUsers().then(users => {
     let sampleUser = users[0]
     let userDiv = `
-        <div class="my-online-user">${sampleUser.username}</div>
+        <div class="my-online-user">
+            <div class="user-username">${sampleUser.username}</div>
+            <div class="user-online"></div>
+        </div>
     `
     
     document.body.innerHTML = userDiv
 })
+
