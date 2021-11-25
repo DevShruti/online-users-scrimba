@@ -1,4 +1,5 @@
 # online-users-scrimba
 #### Flexbox and fetch
 
-![Screenshot (68)](https://user-images.githubusercontent.com/85759426/143469807-4666efd2-8a72-4c42-af27-9bd73ea81027.png)
+
+![Screenshot (69)](https://user-images.githubusercontent.com/85759426/143470161-db7287f6-f57e-4b16-9ec0-3191772f499c.png)
