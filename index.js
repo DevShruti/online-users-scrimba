@@ -1,13 +1,11 @@
 /* 
-    1. 
+    Challenge
     
-    Load users from users.json (originally from https://jsonplaceholder.typicode.com/users)
+    Using the body tag as a Flexbox container
+        re-create the provided layout
     
-    Create a simple component that displays the user's username 
-        -Alongside a green circle
-        -The username and circle should be in individual divs
-        -Both should be vertically and horizontally centered
-        -The component should only be wide enough to Fit its Content (and some padding)
+    Hint: The Header and Footer are each 10% 
+        of the container's height
 */
 
 async function getUsers() {
@@ -17,20 +15,21 @@ async function getUsers() {
 }
 
 function getUserDiv(user) {
-    return `
-        <div class="my-online-user">
-            <div class="user-username">${user.username}</div>
-            <div class="user-online"></div>
-        </div>
-    `
+    return `<div class="my-online-user">
+        <div class="user-username">${user.username}</div>
+        <div class="user-online"></div>
+    </div>`
 }
 
 getUsers().then(users => {
     let sampleUser = users[0]
-    let userDiv = getUserDiv(sampleUser)
     
-    document.body.innerHTML = `<div class="my-online-users">
+    document.body.innerHTML = `
+    <div class="header">Header</div>
+    <div class="my-online-users">
         ${users.map(user => getUserDiv(user)).join('')}
-    </div>`
+    </div>
+    <div class="main-content">Main Content</div>
+    <div class="footer">Footer</div>
+    `
 })
-
